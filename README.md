@@ -4,7 +4,7 @@
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Status: Active](https://img.shields.io/badge/status-active-success.svg)](https://github.com)
+[![Status: Active](https://img.shields.io/badge/status-active-success.svg)](https://github.com/Venkata-Nikhil-Amirisetty/Prompt-Final-Project)
 
 A web-based chatbot that answers questions about Python documentation by retrieving relevant content and generating helpful responses using Google's Gemini API, LangChain, and ChromaDB.
 
@@ -190,7 +190,7 @@ Instructions: Answer based on context, include examples, cite sources...
 ### Step 1: Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Venkata-Nikhil-Amirisetty/Prompt-Final-Project.git
 cd prompt-project
 ```
 

@@ -323,7 +323,7 @@ def main():
         <p>
             <strong>Python Documentation Assistant</strong> v1.0.0<br>
             Built with Streamlit, LangChain, and Google Gemini<br>
-            <a href="https://github.com" target="_blank">GitHub Repository</a> | 
+            <a href="https://github.com/Venkata-Nikhil-Amirisetty/Prompt-Final-Project" target="_blank">GitHub Repository</a> | 
             <a href="https://docs.python.org" target="_blank">Python Documentation</a>
         </p>
     </div>

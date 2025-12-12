@@ -1,0 +1,26 @@
+How do I create a list in Python?
+Explain Python decorators with an example
+What are Python data types?
+How do I handle exceptions in Python?
+What is the difference between a tuple and a list?
+How do I read and write files in Python?
+Explain list comprehensions with examples
+What are Python modules and how do I use them?
+How do I use dictionaries in Python?
+Explain Python classes and objects
+What are Python generators?
+How do I iterate over a list?
+What is the difference between == and is in Python?
+How do I create a virtual environment?
+Explain Python scope and namespaces
+What are lambda functions?
+How do I use list slicing?
+What are Python packages?
+How do I install packages using pip?
+Explain Python inheritance
+What are abstract base classes?
+How do I handle file errors?
+What is the difference between append and extend?
+How do I sort a list?
+What are Python context managers?
+

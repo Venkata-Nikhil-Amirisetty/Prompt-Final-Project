@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Documentation Assistant - RAG & Prompt Engineering</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">🐍 Python Docs Assistant</div>
+            <ul class="nav-menu">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#tech">Tech Stack</a></li>
+                <li><a href="#docs">Documentation</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Python Documentation Assistant</h1>
+                <p class="hero-tagline">AI-Powered Documentation Search using RAG & Prompt Engineering</p>
+                <p class="hero-description">
+                    Get instant, accurate answers to your Python questions by leveraging 
+                    Retrieval-Augmented Generation and advanced prompt engineering techniques.
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://github.com/YOUR_USERNAME/YOUR_REPO_NAME" class="btn btn-primary" target="_blank">View on GitHub</a>
+                    <a href="#demo" class="btn btn-secondary">Try Demo</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-placeholder">
+                    <div class="code-block">
+                        <pre><code># Ask questions about Python
+query = "How do I create a list?"
+answer = assistant.ask(query)
+print(answer)</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Intelligent Search</h3>
+                    <p>RAG-powered document retrieval finds the most relevant Python documentation for your questions using semantic similarity search.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Context-Aware Responses</h3>
+                    <p>Understands follow-up questions and maintains conversation context for natural, flowing interactions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💻</div>
+                    <h3>Code Examples</h3>
+                    <p>Provides runnable Python code examples with proper syntax highlighting and markdown formatting.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Source Attribution</h3>
+                    <p>Shows exactly where answers come from with links to official Python documentation and relevance scores.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Responses</h3>
+                    <p>Optimized for speed with caching, batch processing, and efficient vector search algorithms.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Easy to Use</h3>
+                    <p>Beautiful, intuitive chat interface built with Streamlit - no technical knowledge required.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>User Asks a Question</h3>
+                        <p>You type your Python question into the chat interface.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>System Retrieves Relevant Documentation</h3>
+                        <p>Your question is embedded and searched against the vector database to find the most relevant documentation chunks.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Context is Sent to Gemini LLM</h3>
+                        <p>Retrieved documentation is formatted as context and sent to Google's Gemini model with carefully engineered prompts.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>AI Generates Accurate Response</h3>
+                        <p>The LLM generates a comprehensive answer based on the provided context, including code examples and citations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="diagram">
+                <div class="diagram-box">Query</div>
+                <div class="diagram-arrow">→</div>
+                <div class="diagram-box">Embedding</div>
+                <div class="diagram-arrow">→</div>
+                <div class="diagram-box">Vector Search</div>
+                <div class="diagram-arrow">→</div>
+                <div class="diagram-box">Context</div>
+                <div class="diagram-arrow">→</div>
+                <div class="diagram-box">LLM</div>
+                <div class="diagram-arrow">→</div>
+                <div class="diagram-box">Answer</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="architecture">
+        <div class="container">
+            <h2 class="section-title">System Architecture</h2>
+            <div class="architecture-diagram">
+                <div class="arch-layer">
+                    <h4>User Interface Layer</h4>
+                    <div class="arch-component">Streamlit Web App</div>
+                </div>
+                <div class="arch-arrow">↓</div>
+                <div class="arch-layer">
+                    <h4>Processing Layer</h4>
+                    <div class="arch-components">
+                        <div class="arch-component">Query Preprocessing</div>
+                        <div class="arch-component">Embedding Generation</div>
+                    </div>
+                </div>
+                <div class="arch-arrow">↓</div>
+                <div class="arch-layer">
+                    <h4>Retrieval Layer</h4>
+                    <div class="arch-components">
+                        <div class="arch-component">ChromaDB Vector Store</div>
+                        <div class="arch-component">Similarity Search</div>
+                        <div class="arch-component">Relevance Filtering</div>
+                    </div>
+                </div>
+                <div class="arch-arrow">↓</div>
+                <div class="arch-layer">
+                    <h4>Generation Layer</h4>
+                    <div class="arch-components">
+                        <div class="arch-component">Prompt Engineering</div>
+                        <div class="arch-component">Google Gemini LLM</div>
+                        <div class="arch-component">Response Formatting</div>
+                    </div>
+                </div>
+                <div class="arch-arrow">↓</div>
+                <div class="arch-layer">
+                    <h4>Output Layer</h4>
+                    <div class="arch-component">Answer + Sources</div>
+                </div>
+            </div>
+            <p class="architecture-description">
+                The system uses a modular architecture with clear separation of concerns. 
+                Each layer handles a specific aspect of the RAG pipeline, making the system 
+                maintainable, testable, and extensible.
+            </p>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <h2 class="section-title">Demo & Screenshots</h2>
+            <div class="demo-content">
+                <div class="demo-placeholder">
+                    <div class="demo-screenshot">
+                        <div class="screenshot-header">
+                            <div class="screenshot-dot"></div>
+                            <div class="screenshot-dot"></div>
+                            <div class="screenshot-dot"></div>
+                        </div>
+                        <div class="screenshot-body">
+                            <div class="chat-message user">
+                                <strong>User:</strong> How do I create a list in Python?
+                            </div>
+                            <div class="chat-message assistant">
+                                <strong>Assistant:</strong> You can create a list in Python using square brackets...
+                                <pre><code>my_list = [1, 2, 3]</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo-info">
+                    <h3>Try It Yourself</h3>
+                    <p>To run the application locally:</p>
+                    <ol>
+                        <li>Clone the repository</li>
+                        <li>Install dependencies</li>
+                        <li>Run <code>python setup.py</code></li>
+                        <li>Start with <code>streamlit run app.py</code></li>
+                    </ol>
+                    <a href="https://github.com/YOUR_USERNAME/YOUR_REPO_NAME" class="btn btn-primary" target="_blank">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack Section -->
+    <section id="tech" class="tech-stack">
+        <div class="container">
+            <h2 class="section-title">Technology Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <div class="tech-logo">🐍</div>
+                    <h4>Python</h4>
+                    <p>Core language</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-logo">🔗</div>
+                    <h4>LangChain</h4>
+                    <p>RAG framework</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-logo">🤖</div>
+                    <h4>Google Gemini</h4>
+                    <p>LLM API</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-logo">💾</div>
+                    <h4>ChromaDB</h4>
+                    <p>Vector database</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-logo">🌐</div>
+                    <h4>Streamlit</h4>
+                    <p>Web framework</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="docs" class="documentation">
+        <div class="container">
+            <h2 class="section-title">Documentation</h2>
+            <div class="docs-grid">
+                <div class="doc-card">
+                    <h3>📖 README</h3>
+                    <p>Complete setup and usage guide</p>
+                    <a href="https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/blob/main/README.md" target="_blank">View README →</a>
+                </div>
+                <div class="doc-card">
+                    <h3>⚙️ Setup Guide</h3>
+                    <p>Step-by-step installation instructions</p>
+                    <a href="https://github.com/YOUR_USERNAME/YOUR_REPO_NAME#installation" target="_blank">View Guide →</a>
+                </div>
+                <div class="doc-card">
+                    <h3>📊 API Documentation</h3>
+                    <p>Detailed API reference and examples</p>
+                    <a href="https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/tree/main/docs" target="_blank">View Docs →</a>
+                </div>
+                <div class="doc-card">
+                    <h3>📄 PDF Report</h3>
+                    <p>Comprehensive technical report</p>
+                    <a href="report_content.md" target="_blank">View Report →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Python Documentation Assistant</h4>
+                    <p>Built for educational purposes to demonstrate RAG and Prompt Engineering techniques.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="https://github.com/YOUR_USERNAME/YOUR_REPO_NAME" target="_blank">GitHub Repository</a></li>
+                        <li><a href="https://docs.python.org" target="_blank">Python Documentation</a></li>
+                        <li><a href="https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/issues" target="_blank">Issues</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Technologies</h4>
+                    <ul>
+                        <li>LangChain</li>
+                        <li>Google Gemini</li>
+                        <li>ChromaDB</li>
+                        <li>Streamlit</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Python Documentation Assistant. Built for University Assignment.</p>
+                <p>Licensed under MIT License</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

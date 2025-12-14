@@ -479,9 +479,3 @@ For issues, questions, or contributions:
 - Check the documentation in `docs/`
 - Review example queries in `examples/sample_queries.txt`
 
----
-
-**Built with ❤️ for Python developers**
-
-*Last updated: 2024*
-
